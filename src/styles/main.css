@@ -282,7 +282,7 @@ a {
 .main .grid-videos {
   padding: 0 40px;
   display: grid;
-  gap: 35px 0;
+  gap: 30px 0;
   grid-template-columns: repeat(5, 1fr);
 }
 
@@ -293,7 +293,7 @@ a {
 .main .grid-videos h2 {
   font-size: 1.3rem;
   line-height: 20px;
-  padding: 5px 0 15px;
+  padding: 5px 0 10px;
 }
 
 .main .grid-videos p {
