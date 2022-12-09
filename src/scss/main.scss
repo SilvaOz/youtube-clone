@@ -1,57 +1,51 @@
-@font-face{
-    font-family: 'bebas neue',cursive;
+@font-face {
+    font-family: "bebas neue", cursive;
     src: url(/fonts/Bebas_Neue/BebasNeue-Regular.ttf);
     src: url(/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
 }
-
-** {
-    padding: 0;
+* {
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Open Sans", sans-serif;
 }
-
 a {
     text-decoration: none;
     color: #000;
 }
 .container {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 90px auto;
+    // ich mochte eine animation machen mit grid-template-columns: 90px auto;
     grid-template-rows: 60px auto;
     grid-template-areas:
         "header header"
         "menu main";
 
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
 }
-.container.active {
+.container {
     grid-template-columns: 300px auto;
 }
-                    // HEADER
+// ------------------------------------------HEADER
 .header {
     grid-area: header;
     padding: 0 20px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
-    grid-template-areas: "logo search mic icon";
+    grid-template-areas: "logo search icon";
 }
-
 .header .container-logo {
     grid-area: logo;
     display: flex;
     align-items: center;
 }
-.header .container-logo .btn-menu{
+.header .container-logo .btn-menu {
     border: none;
     padding: 10px;
     background: none;
@@ -61,14 +55,11 @@ a {
     width: 50px;
     height: 50px;
     margin-right: 20px;
-
-
 }
-.header .container-logo .btn-menu:hover{
-    background: #E7E7E7;
-
+.header .container-logo .btn-menu:hover {
+    background: #e7e7e7;
 }
-.header .container-logo .logo .fas{
+.header .container-logo .logo .fas {
     background: #ff0000;
     padding: 7px 12px;
     font-size: 8px;
@@ -77,25 +68,21 @@ a {
     position: relative;
     top: -5px;
     margin-right: 4px;
-
 }
-.header .container-logo .logo{
-    font-family: 'Bebas Neue', sans-serif;
+.header .container-logo .logo {
+    font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
     position: relative;
     top: 2px;
-
 }
-.header .searchbar{
+.header .search {
     grid-area: search;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
-.header .searchbar input{
-    min-width: 40%;
+.header .search input {
+    min-width: 55%;
     padding: 0 15px;
     height: 33px;
     line-height: 35px;
@@ -103,24 +90,39 @@ a {
     font-size: 16px;
     font-family: sans-serif;
 }
-.header .searchbar button{
+.header .search button {
     height: 35px;
     border: 1px solid #ccc;
     border-left: none;
     color: #545454;
     background: #f8f8f8;
     padding: 0 25px;
-    cursor: pointer; 
+    cursor: pointer;
 }
-.header .searchbar button:hover{
+.header .search button:hover {
     background: #f5f5f5;
 }
-
-.header .btn-header{
-    grid-area: icon;
+.header .mic .voice {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 7px 12px;
+    border-radius: 100px;
+    color: #000000;
+    // background: #F5F5F5;
+    border: none;
+    cursor: pointer;
+}
+.header .mic .voice:hover {
+    background: #efedec;
+}
+.header .btn-header {
+    // grid-area: icon;
     display: flex;
     align-items: center;
 }
+
 .header .btn-header button {
     background: none;
     border: none;
@@ -133,60 +135,140 @@ a {
     margin-right: 20px;
     cursor: pointer;
 }
-.header .mic button{
-    grid-area: search;
-    
-    background: none;
-    border: none;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    padding: 7px 0px;
-    border-radius: 100px;
-    color: #000;
-    background: #e7e7e7;
-    
-    cursor: pointer;
+.header .btn-header button:hover {
+    background: #efedec;
 }
-.header .btn-header button:hover{
-    background: #e7e7e7;
-}
-.header .btn-header .avatar{
+.header .btn-header .avatar {
     width: 30px;
     height: 30px;
     display: inline-block;
-
 }
-.header .btn-header .avatar img{
+.header .btn-header .avatar img {
     vertical-align: top;
     width: 100%;
     border-radius: 100px;
 }
-                    // MAIN
-.menu{
+// --------------------------------------------LATERAL MENU
+.menu {
+    line-height: 30px;
     grid-area: menu;
     background: #fff;
+    overflow: hidden;
 }
-.menu a{
+.menu a {
     display: block;
-    padding: 15px 35px;
+    padding: 12px 35px;
     color: #000;
+    min-width: 800px;
 }
-.menu a:hover{
-    background:#e5e5e5;
+.menu a:hover {
+    background: #e5e5e5;
 }
-// .menu a.active{
-//     background-color: #e5e5e5;
-//     font-weight: bold;
-// }
-.menu .fas{
+.menu .fas {
     color: #606060;
     margin-right: 32px;
-    width: 20px;
+    width: 25px;
     text-align: center;
+}
+.menu h3 {
+    color: #545454;
+    padding: 20px 35px 0;
 }
 .main {
     grid-area: main;
+    background: #f9f9f9;
+    // padding: 40px;
+}
+.main .banner img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.main .user {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+}
+// --------------------------MAIN PROFILE
+.main .profile {
+    display: inline-flex;
+}
+.main .user .user-img {
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+    border-radius: 100px;
+}
+.main .profile .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main .profile li h1 {
+    padding: 10px 0 0;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.main .profile li h4 {
+    color: #545454;
+    font-size: 1.2rem;
+}
+.main .button-subs a {
+    padding: 10px 20px;
+    margin-left: 1000px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.main .button-subs a:hover {
+    color: white;
+    background-color: #ff00007c;
+}
+.main .bar-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 100px 15px 60px;
+}
 
-    background-color: gray;
+.main li {
+    list-style: none;
+}
+.main li a {
+    color: #545454;
+    font-weight: bold;
+}
+.main li a:hover {
+    color: #000;
+}
+
+.main h3 {
+    padding: 20px 40px;
+    color: #545454;
+}
+// ------------------  VIDEOS, MAIN
+.main .grid-videos {
+    padding: 0 40px;
+    display: grid;
+    gap: 35px 0;
+    grid-template-columns: repeat(5, 1fr);
+}
+.main .grid-videos .videos {
+    width: 100%;
+    // display: block;
+}
+.main .grid-videos h2 {
+    font-size: 1.3rem;
+    line-height: 20px;
+    padding: 5px 0 15px;
+}
+.main .grid-videos p {
+    color: #545454;
+}
+.main .grid-videos .videos img {
+    width: 100%;
 }

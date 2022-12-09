@@ -1,76 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
-
 <body>
-    <!-- HEADER  -->
-    <div class="container active">
+    <!------------------------------------- HEADER  --------------------------------------------->
+    <div class="container ">
         <header class="header">
             <div class="container-logo">
                 <button id="btn-menu" class="btn-menu"><i class="fas fa-bars"></i></button>
                 <a href="#" class="logo"><i class="fas fa-play"></i><span>YouTube</span></a>
             </div>
-            <div class="searchbar"><input type="text" placeholder="Search">
+            <div class="search"><input type="text" placeholder="Search">
                 <button type="submit"><i class="fas fa-search"></i></button>
-
-            </div>
-            <div class="mic">
-                <button class="voicesearch"><i class="fas fa-microphone"></i></button>
+                <div class="mic">
+                    <button class="voice">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
             </div>
             <div class="btn-header">
                 <button><i class="fas fa-video"></i></button>
                 <button><i class="fas fa-th"></i></button>
                 <button><i class="fas fa-bell"></i></button>
-                <a href="#" class="avatar"><img src="/images/avatar.png" alt=""></a>
-
+                <a href="#" class="avatar"><img src="./images/Profile/avatar.png" alt=""></a>
             </div>
         </header>
-
+        <!---------------------------------------- NAV, LATERAL MENU  ------------------------------------->
         <nav class="menu">
             <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
             <a href="#"><i class="fas fa-fire"></i>Trending</a>
             <a href="#"><i class="fas fa-star"></i>Subscriptions</a>
-
             <hr>
-
             <a href="#"><i class="fas fa-folder"></i>Library</a>
-            <a href="#"><i class="fas fa-folder"></i>Histoy</a>
-            <a href="#"><i class="fas fa-folder"></i>Your videos</a>
+            <a href="#"><i class="fas fa-clock"></i>History</a>
+            <a href="#"><i class="fas fa-video"></i>Your videos</a>
             <a href="#"><i class="fas fa-folder"></i>Watch later</a>
-            <a href="#"><i class="fas fa-folder"></i>Favorites</a>
-            <a href="#"><i class="fas fa-folder"></i>show more</a>
-
+            <a href="#"><i class="fas fa-bookmark"></i>Favorites</a>
+            <a href="#"><i class="fas fa-chevron-down"></i>show more</a>
             <hr>
-
-            <H4>SUBSCRIPTIONS</H4>
+            <h3 class="subtitle">SUBSCRIPTIONS</h3>
             <a href="#"><i class="fas fa-folder"></i>DW Documentary</a>
             <a href="#"><i class="fas fa-folder"></i>Tagesschau</a>
-            <a href="#"><i class="fas fa-folder"></i>Pro Home Cooks</a>
-            <a href="#"><i class="fas fa-folder"></i>Karl Conrad</a>
-            <a href="#"><i class="fas fa-folder"></i>Oscar Silva</a>
-            <a href="#"><i class="fas fa-folder"></i>Marques Brownlee</a>
-            <a href="#"><i class="fas fa-folder"></i>Bussiness Insider</a>
-            <a href="#"><i class="fas fa-folder"></i>Show 112 more</a>
-
-
+            <a href="#"><i class="fas fa-folder"></i>Leotrim</a>
+            <a href="#"><i class="fas fa-folder"></i>Ulus</a>
+            <a href="#"><i class="fas fa-folder"></i>Danka</a>
+            <a href="#"><i class="fas fa-folder"></i>Peggy</a>
+            <a href="#"><i class="fas fa-folder"></i>Jens</a>
+            <a href="#"><i class="fas fa-folder"></i>Fatih</a>
+            <a href="#"><i class="fas fa-folder"></i>Katada</a>
+            <a href="#"><i class="fas fa-folder"></i>Enrique</a>
+            <a href="#"><i class="fas fa-folder"></i>Anna</a>
+            <a href="#"><i class="fas fa-folder"></i>Mehmet</a>
+            <a href="#"><i class="fas fa-folder"></i>Louise</a>
+            <a href="#"><i class="fas fa-folder"></i>Juliette</a>
+            <a href="#"><i class="fas fa-chevron-down"></i>Show 112 more</a>
+            <hr>
         </nav>
-        <!-- MAIN  -->
+        <!------------------------------------------------- MAIN --------------------------------------- -->
+        <!------- PART 1, USER PROFILE ------->
         <main class="main">
-            <div class="profile"></div>
-            <div class=""></div>
+            <aside class="mitad">
+                <div class="banner">
+                    <img src="./images/Profile/profile_banner001.png" alt="">
+                </div>
+                <div class="user">
+                    <div class="dentro">
+                        <div class="profile">
+                            <img src="images/Profile/profile_ParisHilton002.png" class="user-img" alt="">
+                            <ul class="text">
+                                <li>
+                                    <h1>Paris Hilton ♪</h1>
+                                    <h4>1,05M subscribers</h4>
+                                </li>
+                                <li class="btn-subs">
+                                    <div class="button-subs"><a href="#">SUBSCRIBE</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <section>
+                    <ul class="bar-profile">
+                        <li> <a href="#">HOME</a> </li>
+                        <li> <a href="#">VIDEOS</a> </li>
+                        <li> <a href="#">PLAYLIST</a> </li>
+                        <li> <a href="#">COMMUNITY</a> </li>
+                        <li> <a href="#">STORE</a> </li>
+                        <li> <a href="#">CHANNELS</a> </li>
+                        <li> <a href="#">ABOUT</a> </li>
+                        <li> <a href="#"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </section>
+            </aside>
+            <hr>
+            <!--.------- PART 2, VIDEO --------------->
+            <h3 class="subtitle">Uploads</h3>
+            <article class="grid-videos">
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_001.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_002.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_003.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_004.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_005.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_006.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_007.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_008.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_009.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_010.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_011.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_012.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_013.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_014.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="video"><img src="./images/img-ParisHilton_015.jpg" alt="" width="300px"
+                            height="160"></a>
+                    <a href="">
+                        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </h2>
+                        <p>675 views | 2 weeks ago</p>
+                    </a>
+                </div>
+            </article>
         </main>
     </div>
-
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
